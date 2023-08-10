@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Spin wheel</title>
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <div class="number" style="--i:1;--clr:#db7093;
+            "><span>10</span></div>
+            <div class="number" style="--i:2;--clr:#33ec09;
+            "><span>100</span></div>
+            <div class="number" style="--i:3;--clr:#70dbb7;
+            "><span>0</span></div>
+            <div class="number" style="--i:4;--clr:#68126e;
+            "><span>1</span></div>
+            <div class="number" style="--i:5;--clr:#804707;
+            "><span>5</span></div>
+            <div class="number" style="--i:6;--clr:#55615e;
+            "><span>20</span></div>
+            <div class="number" style="--i:7;--clr:#6b8220;
+            "><span>50</span></div>
+            <div class="number" style="--i:8;--clr:#0885fa;
+            "><span>1000</span></div>
+        </div>
+    </div>
+    <script>
+        let wheel = document.querySelector('.wheel');
+        let spinBtn = document.querySelector('.spinBtn');
+        let value = Math.ceil(Math.random() * 3600);
+
+        spinBtn.onclick = function(){
+            // console.log('clicked');
+            wheel.style.transform = "rotate("+ value +"deg)";
+            value += Math.cell(Math.random() * 3600);
+        }
+    </script>
+</body>
+</html>
